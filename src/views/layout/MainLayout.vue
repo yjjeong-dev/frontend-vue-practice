@@ -1,17 +1,17 @@
 <template>
-   <div>
-      <LeftSideMenu></LeftSideMenu>
-      <slot></slot>
-   </div>
+  <div>
+    <LeftSideMenu></LeftSideMenu>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-import LeftSideMenu from '@/views/component/LeftSideMenu.vue'
+import LeftSideMenu from "@/views/component/LeftSideMenu.vue";
 export default {
-   name: 'MainLayout',
-   components: {
-      LeftSideMenu
-   }
+  name: "MainLayout",
+  components: {
+    LeftSideMenu,
+  },
 };
 </script>
 

@@ -1,10 +1,16 @@
-
 <template>
   <div class="side-navi">
-    <v-navigation-drawer app :value="show" v-click-outside="outside" v-bind:width="240">
+    <v-navigation-drawer
+      app
+      :value="show"
+      v-click-outside="outside"
+      v-bind:width="240"
+    >
       <div class="logo">
         <a href="/main">
-          <img src="https://console.ncloud.com/public/img/console-logo-pub-ko.svg"></img>
+          <img
+            src="https://console.ncloud.com/public/img/console-logo-pub-ko.svg"
+          />
         </a>
       </div>
       <v-list nav expand dense>
@@ -51,7 +57,6 @@
                   link
                   @click="changeTitle(item.title)"
                 >
-
                   <v-list-item-title>
                     {{ item.title }}
                     <v-badge
@@ -73,7 +78,6 @@
 </template>
 
 <script>
-
 export default {
   name: "LeftSideMenu",
   data: () => ({
@@ -136,6 +140,7 @@ export default {
       this.show = !this.show;
     },
     changeTitle(title) {
+      console.log(title);
       // this.$store.dispatch("setMenuTitle", title);
     },
   },
@@ -146,24 +151,27 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.side-navi .v-navigation-drawer{
+.side-navi .v-navigation-drawer {
   background: #1e232e;
 
-  .v-list-item__title, i.v-icon{
-    color:white;
+  .v-list-item__title,
+  i.v-icon {
+    color: white;
   }
-  .v-list-item--dense .v-list-item__title, .v-list-item--dense .v-list-item__subtitle, .v-list--dense .v-list-item .v-list-item__title, .v-list--dense .v-list-item .v-list-item__subtitle{
+  .v-list-item--dense .v-list-item__title,
+  .v-list-item--dense .v-list-item__subtitle,
+  .v-list--dense .v-list-item .v-list-item__title,
+  .v-list--dense .v-list-item .v-list-item__subtitle {
     font-size: 12px;
   }
-  .logo a{
+  .logo a {
     height: 100px;
     text-align: center;
     background: #1e232e;
     display: block;
   }
-  .logo a img{
+  .logo a img {
     margin-top: 25px;
   }
 }
-
 </style>
